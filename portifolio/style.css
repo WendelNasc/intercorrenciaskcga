@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    
+}
+
+body {
+    font-family: 'Montserrat';
+    background: linear-gradient(135deg, #00CCD1, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+/* CLASSIFICAÇÃO */
+.classificacao {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    width: 16rem;
+}
+
+.classificacao h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
+
+.classificacao label,
+.box-opcoes label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+.classificacao input,
+.box-opcoes input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* CAIXAS LEVE E MÉDIO */
+.box-opcoes {
+    position: absolute;
+    right: 1.5rem;
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    width: 16rem;
+}
+
+.leve-box h3 {
+    top: 13rem;
+    color: #2cb403;
+}
+
+.medio-box h3 {
+    top: 33rem;
+    color: #ffe600;
+}
+.grave-box h3{
+    top: 53rem;
+    color: red;
+}
+
+.box-opcoes  {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.box-opcoes input[type="text"] {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #ccc;
+    width: 100%;
+}
+
+/* FORMULÁRIO */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 32rem;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #1e3c72;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linha-dupla {
+    display: flex;
+    gap: 1rem;
+}
+
+.linha-dupla input {
+    flex: 1;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #1e3c72;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #16325c;
+}
+
+/* RESPONSIVO */
+@media (max-width: 75rem) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .classificacao,
+    .box-opcoes {
+        position: static;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .linha-dupla {
+        flex-direction: column;
+    }
+
+    html {
+        font-size: 90%;
+    }
+}
+
